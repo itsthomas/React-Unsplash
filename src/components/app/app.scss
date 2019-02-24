@@ -1,0 +1,77 @@
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+/* ******************************
+    Basic styling (ignore me!)
+****************************** */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+}
+.wrapper {
+  max-width: 80%;
+  margin: 20px auto;
+  text-align: center;
+
+  h1 {
+    color: #fff;
+  }
+}
+/* ******************************
+    End of Basic styling
+****************************** */
+
+// SweetAlert
+.sweetalert {
+  h2 {
+    font-size: 1.6rem;
+  }
+  .text-muted {
+    margin: 18px 0 10px;
+  }
+}
+
+/* Flexbox wrapper */
+.flexbox {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100vw;
+
+  /* Each flex item */
+  .item {
+    position: relative;
+    width: 33.33%; // 3 column
+    img {
+      width: 100%;
+      display: block;
+      transition: all 0.8s;
+    }
+  }
+}
+
+/* Mediaqueries */
+@media (max-width: 860px) {
+  /* set to 2 column */
+  .flexbox {
+    height: 220vw;
+    .item {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 667px) {
+  /* // set to 1 column */
+  .flexbox {
+    height: auto;
+    .item {
+      width: 100%;
+    }
+  }
+}
